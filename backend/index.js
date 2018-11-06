@@ -4,6 +4,13 @@ const express = require('express');
 // define variables
 const app = express();
 
+// enable CORS on /list route only
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+})
+
 // body
 // Read verb          // request and send
 app.get('/main', function(req, res) {
@@ -11,17 +18,17 @@ app.get('/main', function(req, res) {
   const data = [{
     style: 'casual',
     image: 'https://notredame.box.com/shared/static/408cbkofqigvcrtddwl0bv5ptjrvwchj.jpg',
-    inventory: 3,
+    inventory: 1,
     price: '$',
     likes: 10},
     {style: 'athleisure',
     image: '',
-    inventory: 5,
+    inventory: 1,
     price: '$$',
     likes: 30},
-    {style: 'preppy',
+    {style: 'dressy',
     image: '',
-    inventory: 7,
+    inventory: 1,
     price: '$$$',
     likes: 20}]
   res.status(200).send(data)
