@@ -1,5 +1,41 @@
 h1 {
     color: mediumpurple;
     font-size: 50px;
-    font-family: monospace
+    font-family: Hanging Letters;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p1 {
+    clear: both;
+    text-align: left;
+    display: block;
+}
+
+.mood {
+    display: block;
+/*
+    margin-left: auto;
+    margin-right: auto;
+*/
+}
+
+p2 {
+    display: block;
+}
+
+p3 {
+    display: block;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    background-color: aliceblue;
+    text-decoration: none;
+    border-radius: 200px;
+    margin-left: 200px;
 }
