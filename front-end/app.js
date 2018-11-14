@@ -16,3 +16,7 @@ var maincontroller = function($scope, $http) {
 maincontroller.$inject = ['$scope', '$http'];
 angularApp.controller('maincontroller', maincontroller);
 
+
+AOS.init({
+  duration: 1200,
+})
