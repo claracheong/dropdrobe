@@ -6,8 +6,9 @@
         <script src="//code.angularjs.org/1.3.0-rc.1/angular.min.js">
         </script>
         <script src = "app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     </head>
-<body>
+<body ng-app = "app.js">
 
 <div class="title">
   <h1>DROPDROBE</h1>
@@ -19,18 +20,20 @@
             <h2>{{item.style}}</h2>
             <img ng-src = {{item.image}} class = "mood">
             <p1>{{item.inventory}} || {{item.price}} ||  {{item.likes}} </p1>
-            <a href="a" class = "button">SHOP THE STYLE</a>
+            
+            <a href="/front-end/casual.html" class = "button">SHOP THE STYLE</a>
+        <div ng-view></div>
             <hr>
         </div>
+        
     </div>
-
 <!--
   <div class="casual">
     <h3> CASUAL </h3>
     <img src = "https://notredame.box.com/shared/static/408cbkofqigvcrtddwl0bv5ptjrvwchj.jpg" alt = "casual_mood">  
   </div>
 </div>  
-<hr>
+<hr> d
 <div class="athleisure">
     <h3> ATHLEISURE </h3>
   </div>

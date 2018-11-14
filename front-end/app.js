@@ -1,4 +1,4 @@
-var angularApp = angular.module('angularApp', []);
+var angularApp = angular.module('angularApp', ["ngRoute"]);
 
 var maincontroller = function($scope, $http) {
     $http({
@@ -15,4 +15,11 @@ var maincontroller = function($scope, $http) {
 
 maincontroller.$inject = ['$scope', '$http'];
 angularApp.controller('maincontroller', maincontroller);
+
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/front-end/casual.html", {
+        templateUrl: "/front-end/casual.html"
+    });
+});
 
