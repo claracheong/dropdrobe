@@ -16,10 +16,12 @@ var maincontroller = function($scope, $http) {
 maincontroller.$inject = ['$scope', '$http'];
 angularApp.controller('maincontroller', maincontroller);
 
-var lookscontroller = function($scope, $http) {
+var lookscontroller = function($scope, $http, $routeParams) {
+    $scope.style = $routeParams.style;
+    console.log("hello",$scope.style);
 }
 
-lookscontroller.$inject = ['$scope', '$http'];
+lookscontroller.$inject = ['$scope', '$http','$routeParams'];
 angularApp.controller('lookscontroller', lookscontroller);
 
 angularApp.config(function($routeProvider) {
@@ -30,7 +32,7 @@ angularApp.config(function($routeProvider) {
         controller: "maincontroller"
     })
     
-    .when("/looks", {
+    .when("/looks/:style", {
         templateUrl: "looks.html",
         controller: "lookscontroller"
     });
