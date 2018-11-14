@@ -1,0 +1,78 @@
+
+@font-face {
+    font-family: 'bakeryregular';
+    src: url('bakery-webfont.woff2') format('woff2'),
+         url('bakery-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1 {
+    color: grey;
+    font-size: 75px;
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: emizfont;
+}
+
+p1 {
+    clear: both;
+    text-align: center;
+    display: block;
+}
+
+.mood {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    display: block;
+    padding: 10px 20px;
+    font-weight: 300px;
+    font-family: sans-serif;
+    background-color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 200px;
+    
+}
+
+.look-button {
+    display: block;
+    text-align: right;
+    padding: 10px 20px;
+    font-weight: 300px;
+    font-family: 'Amatic SC', cursive; 
+    background-color: grey;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+}
+/* want it to animate once on screen (like wave of opacity) and be able to swipe it to get to the linked page */
+/* also want to do this somehow https://css-tricks.com/slide-in-as-you-scroll-down-boxes/ */
+
+.endofpage {
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-size: 25px;
+}
+
+.row {
+    align-items: center;
+}
+
+Result
+EDIT ON
+ * {
+  box-sizing: border-box;
+}
+
