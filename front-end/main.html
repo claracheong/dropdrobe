@@ -1,47 +1,6 @@
-<!DOCTYPE html>
-<html ng-app="angularApp">
-    <head> 
-        <title> DROPDROBE </title>
-        <link rel = "stylesheet" type = "text/css" href="style.css">
-        <script src="//code.angularjs.org/1.3.0-rc.1/angular.min.js">
-        </script>
-        <script src = "app.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-    </head>
-<body ng-app = "app.js">
-
-<div class="title">
-  <h1>DROPDROBE</h1>
+<div ng-repeat = "item in items track by $index">
+    <h2>{{item.style}}</h2>
+    <img ng-src = {{item.image}} class = "mood">
+    <p1>{{item.inventory}} || {{item.price}} ||  {{item.likes}} </p1>
+    <a href="#/looks" class = "button">SHOP THE STYLE</a>
 </div>
-<div class="moodboards">
-<hr>
-    <div ng-controller='maincontroller'>
-        <div ng-repeat = "item in items track by $index">
-            <h2>{{item.style}}</h2>
-            <img ng-src = {{item.image}} class = "mood">
-            <p1>{{item.inventory}} || {{item.price}} ||  {{item.likes}} </p1>
-            
-            <a href="/front-end/casual.html" class = "button">SHOP THE STYLE</a>
-        <div ng-view></div>
-            <hr>
-        </div>
-        
-    </div>
-<!--
-  <div class="casual">
-    <h3> CASUAL </h3>
-    <img src = "https://notredame.box.com/shared/static/408cbkofqigvcrtddwl0bv5ptjrvwchj.jpg" alt = "casual_mood">  
-  </div>
-</div>  
-<hr> d
-<div class="athleisure">
-    <h3> ATHLEISURE </h3>
-  </div>
-</div>
-<hr>
-<div class="preppy">
-    <h3> PREPPY </h3>
-  </div>
-<hr>
--->
-</body>

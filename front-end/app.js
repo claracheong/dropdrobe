@@ -16,17 +16,23 @@ var maincontroller = function($scope, $http) {
 maincontroller.$inject = ['$scope', '$http'];
 angularApp.controller('maincontroller', maincontroller);
 
-<<<<<<< HEAD
-app.config(function($routeProvider) {
+var lookscontroller = function($scope, $http) {
+}
+
+lookscontroller.$inject = ['$scope', '$http'];
+angularApp.controller('lookscontroller', lookscontroller);
+
+angularApp.config(function($routeProvider) {
     $routeProvider
-    .when("/front-end/casual.html", {
-        templateUrl: "/front-end/casual.html"
+    
+    .when("/", {
+        templateUrl: "main.html", 
+        controller: "maincontroller"
+    })
+    
+    .when("/looks", {
+        templateUrl: "looks.html",
+        controller: "lookscontroller"
     });
 });
 
-=======
-
-AOS.init({
-  duration: 1200,
-})
->>>>>>> b249a5dfd468d52edd307164313f0070f6f5c61f
