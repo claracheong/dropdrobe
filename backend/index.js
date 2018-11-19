@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
 
 // body
 // Read verb          // request and send
-app.get('styles', function(req, res) {
+app.get('/styles', function(req, res) {
 // array of objects
   const data = [{
     style: 'casual',
