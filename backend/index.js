@@ -4,6 +4,10 @@ const express = require('express');
 // define variables
 const app = express();
 
+const AmazonScraper = require('amazon-scraper')
+const config = require('./config.json')
+
+const amazon_scraper = AmazonScraper(config);
 // enable CORS on /list route only
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -13,24 +17,24 @@ app.use(function(req, res, next) {
 
 // body
 // Read verb          // request and send
-app.get('/main', function(req, res) {
+app.get('/looks', function(req, res) {
 // array of objects
   const data = [{
     style: 'casual',
     image: 'https://notredame.box.com/shared/static/408cbkofqigvcrtddwl0bv5ptjrvwchj.jpg',
     inventory: 1,
     price: '$',
-    likes: 10},
+    likes: 0},
     {style: 'athleisure',
     image: '',
     inventory: 1,
     price: '$$',
-    likes: 30},
+    likes: 0},
     {style: 'dressy',
     image: '',
     inventory: 1,
     price: '$$$',
-    likes: 20}]
+    likes: 0}]
   res.status(200).send(data)
 });
 
@@ -54,6 +58,14 @@ app.get('/looks/casual', function(req, res) {
     res.status(200).send(data)
 });
 
+// amazon scraper
+app.get('/amazon', function(req, res) {
+  amazon_scraper.scraper.then(function(data) {
+    console.log(data);
+    amazon_scraper.printTable(data)
+    res.status(200).send(data)
+  });
+});
 
 // in case of environmental variables for privacy
 const port = process.env.PORT || 3000;
@@ -61,5 +73,3 @@ const httpServer = require('http').createServer(app);
 httpServer.listen(port, function() {
   console.log('backend running on port ' + port + '.');
 });
-// exports
-// no exports on index.js
