@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
 
 // body
 // Read verb          // request and send
-app.get('/looks', function(req, res) {
+app.get('styles', function(req, res) {
 // array of objects
   const data = [{
     style: 'casual',
@@ -38,7 +38,7 @@ app.get('/looks', function(req, res) {
   res.status(200).send(data)
 });
 
-app.get('/looks/casual', function(req, res) {
+app.get('/styles/casual', function(req, res) {
   const data = [{
     look: 'elixaberh',
     shoes: 'https://notredame.box.com/s/s2vcwd3xphq57flmmg2gsjj4pxozvq3l',
