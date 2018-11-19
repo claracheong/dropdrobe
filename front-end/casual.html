@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html ng-app="angularApp">
-    <head> 
-        <title> CASUAL </title>
-    </head>
-    
-    <h1> CASUAL </h1>
+<div ng-repeat = "item in items track by $index" class = "row" >
+    <img ng-src = {{item.outfit}}>
+    <img ng-src = {{item.necklace}}>
+    <img ng-src = {{item.rings}}>
+    <img ng-src = {{item.shoes}}>
+    <a href = "#/{{item.look}}" class = "look-button"> more info >> </a>
+</div>
