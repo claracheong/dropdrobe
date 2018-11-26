@@ -60,10 +60,14 @@ app.get('/styles/casual', function(req, res) {
 
 // amazon scraper
 app.get('/amazon', function(req, res) {
-  amazon_scraper.scraper.then(function(data) {
+  console.log('starting amazon');
+  return amazon_scraper.scraper.catch(function (err) {
+    console.log('failed');
+    console.error(err);
+  }).then(function(data) {
     console.log(data);
     amazon_scraper.printTable(data)
-    res.status(200).send(data)
+    return res.status(200).send(data)
   });
 });
 
