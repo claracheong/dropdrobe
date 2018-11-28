@@ -58,6 +58,7 @@ app.get('/looks/casual', function(req, res) {
   res.status(200).send(data2)
 });
 
+<<<<<<< HEAD
 //// amazon scraper
 //app.get('/amazon', function(req, res) {
 //  amazon_scraper.scraper.then(function(data) {
@@ -66,6 +67,20 @@ app.get('/looks/casual', function(req, res) {
 //    res.status(200).send(data)
 //  });
 //});
+=======
+// amazon scraper
+app.get('/amazon', function(req, res) {
+  console.log('starting amazon');
+  return amazon_scraper.scraper.catch(function (err) {
+    console.log('failed');
+    console.error(err);
+  }).then(function(data) {
+    console.log(data);
+    amazon_scraper.printTable(data)
+    return res.status(200).send(data)
+  });
+});
+>>>>>>> 1e543cffbd1ed4c2e417b2e732b8a7ae46920ab3
 
 // in case of environmental variables for privacy
 const port = process.env.PORT || 3000;

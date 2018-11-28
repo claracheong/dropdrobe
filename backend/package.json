@@ -9,6 +9,7 @@
   "author": "Elizabeth Yi",
   "license": "ISC",
   "dependencies": {
+    "amazon-scraper": "github:esyi0204/amazon-scraper",
     "error-stack-parser": "^2.0.2",
     "express": "^4.16.4",
     "http-server": "^0.11.1",
