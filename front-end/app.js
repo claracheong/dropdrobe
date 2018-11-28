@@ -2,8 +2,8 @@ var angularApp = angular.module('angularApp', ["ngRoute"]);
 
 var maincontroller = function($scope, $http) {
     $http({
-  method: 'GET',
-  url: 'http://localhost:3000/main'
+        method: 'GET',
+        url: 'http://localhost:3000/main'
 }).then(function successCallback(response) {
     console.log(response);
     $scope.items = response.data;
@@ -27,10 +27,10 @@ angularApp.controller('lookscontroller', lookscontroller);
 var stylecontroller = function($scope, $http) {
     $http({
         method: 'GET',
-        url: 'http://localhost:3000/casual'
+        url: 'http://localhost:3000/looks/casual'
     }).then(function successCallback(response) {
     console.log(response);
-    $scope.items = response.data;
+    $scope.things = response.data2;
   }, function errorCallback(response) {
     // called asynchronously if an error occurs
     // or server returns response with an error status.

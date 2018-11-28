@@ -4,10 +4,10 @@ const express = require('express');
 // define variables
 const app = express();
 
-const AmazonScraper = require('amazon-scraper')
+//const AmazonScraper = require('amazon-scraper')
 const config = require('./config.json')
 
-const amazon_scraper = AmazonScraper(config);
+//const amazon_scraper = AmazonScraper(config);
 // enable CORS on /list route only
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
 
 // body
 // Read verb          // request and send
-app.get('/styles', function(req, res) {
+app.get('/main', function(req, res) {
 // array of objects
   const data = [{
     style: 'casual',
@@ -38,8 +38,8 @@ app.get('/styles', function(req, res) {
   res.status(200).send(data)
 });
 
-app.get('/styles/casual', function(req, res) {
-  const data = [{
+app.get('/looks/casual', function(req, res) {
+  const data2 = [{
     look: 'elixaberh',
     shoes: 'https://notredame.box.com/s/s2vcwd3xphq57flmmg2gsjj4pxozvq3l',
     rings: 'https://notredame.box.com/s/vmx1j5mwq6fnefd13nb8g765c5jqcwky',
@@ -55,17 +55,17 @@ app.get('/styles/casual', function(req, res) {
     rings: 'https://notredame.box.com/s/vmx1j5mwq6fnefd13nb8g765c5jqcwky',
     necklace: 'https://notredame.box.com/s/azdtffg08doldkaj1e6rlugxmqyqqsty',
     outfit: 'https://notredame.box.com/s/ogo6po3798uq286653s52itzwxvf992b'}]
-  res.status(200).send(data)
+  res.status(200).send(data2)
 });
 
-// amazon scraper
-app.get('/amazon', function(req, res) {
-  amazon_scraper.scraper.then(function(data) {
-    console.log(data);
-    amazon_scraper.printTable(data)
-    res.status(200).send(data)
-  });
-});
+//// amazon scraper
+//app.get('/amazon', function(req, res) {
+//  amazon_scraper.scraper.then(function(data) {
+//    console.log(data);
+//    amazon_scraper.printTable(data)
+//    res.status(200).send(data)
+//  });
+//});
 
 // in case of environmental variables for privacy
 const port = process.env.PORT || 3000;
