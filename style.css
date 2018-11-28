@@ -27,6 +27,12 @@ p1 {
     display: block;
 }
 
+p {
+    margin: 0;
+    line-height: normal;
+    float: right;
+}
+
 .mood {
     display: block;
     margin-left: auto;
@@ -79,7 +85,6 @@ EDIT ON
 
 .logo {
     align-content: center;
-    height: 9%;
     width: 9%;
     padding-bottom: 0;
     padding-left: 10px;
@@ -87,4 +92,21 @@ EDIT ON
 
 .smol {
     font-size: 66%;
+}
+
+.consignment {
+    font-size: 450%;
+}
+
+.consign-logo {
+    align-content: center;
+    width: 7%;
+    padding-bottom: 0;
+    padding-left: 10px;
+}
+
+form {
+    align-content: center;
+    font-family: Poiret One;
+    padding-left: 40%;
 }
