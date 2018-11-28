@@ -1,14 +1,24 @@
 h1 {
     color: #808080;
-    font-size: 575%;
-    font-family: 'Playfair Display', serif;
-    padding-bottom: 0px;
+    font-size: 560%;
+    font-family: serif;
     text-align: center;
+    text-decoration: none;
+    line-height: 0%;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 h2 {
-    font-size: 30px;
-    font-family: emizfont;
+    padding-left: 2%;
+    font-size: 125%;
+    font-family: Poiret One;
+    color: #616161;
+    padding-top: 0;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    text-align: center;
+    text-decoration: none;
 }
 
 p1 {
@@ -40,7 +50,7 @@ p1 {
     text-align: right;
     padding: 10px 20px;
     font-weight: 300px;
-    font-family: 'Amatic SC', cursive; 
+    font-family: Poiret One; 
     background-color: grey;
     text-decoration: none;
     font-size: 20px;
@@ -51,9 +61,10 @@ p1 {
 /* also want to do this somehow https://css-tricks.com/slide-in-as-you-scroll-down-boxes/ */
 
 .endofpage {
-    font-family: 'Amatic SC', cursive;
+    font-family: Poiret One;
     text-align: center;
     font-size: 25px;
+    color: #616161;
 }
 
 .row {
@@ -68,13 +79,12 @@ EDIT ON
 
 .logo {
     align-content: center;
-    height: 10%;
-    width: 10%;
+    height: 9%;
+    width: 9%;
     padding-bottom: 0;
+    padding-left: 10px;
 }
 
-.tagline {
-    font-size: 30px;
-    font-family: 'Amatic SC', cursive;
-    color: #616161;
+.smol {
+    font-size: 66%;
 }
