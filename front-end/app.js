@@ -19,26 +19,36 @@ angularApp.controller('maincontroller', maincontroller);
 var lookscontroller = function($scope, $http, $routeParams) {
     $scope.style = $routeParams.style;
     console.log("hello",$scope.style);
-}
-
-lookscontroller.$inject = ['$scope', '$http','$routeParams'];
-angularApp.controller('lookscontroller', lookscontroller);
-
-var stylecontroller = function($scope, $http) {
     $http({
         method: 'GET',
-        url: 'http://localhost:3000/looks/casual'
+        url: 'http://localhost:3000/looks/'+$routeParams.style
     }).then(function successCallback(response) {
-    console.log(response);
-    $scope.things = response.data2;
+    console.log('lookscontroller',response);
+    $scope.things = response.data;
   }, function errorCallback(response) {
     // called asynchronously if an error occurs
     // or server returns response with an error status.
   });
 }
 
-stylecontroller.$inject = ['$scope', '$http'];
-angularApp.controller('stylecontroller', stylecontroller);
+lookscontroller.$inject = ['$scope', '$http','$routeParams'];
+angularApp.controller('lookscontroller', lookscontroller);
+
+//var stylecontroller = function($scope, $http) {
+//    $http({
+//        method: 'GET',
+//        url: 'http://localhost:3000/looks/casual'
+//    }).then(function successCallback(response) {
+//    console.log(response);
+//    $scope.things = response.data2;
+//  }, function errorCallback(response) {
+//    // called asynchronously if an error occurs
+//    // or server returns response with an error status.
+//  });
+//}
+//
+//stylecontroller.$inject = ['$scope', '$http'];
+//angularApp.controller('stylecontroller', stylecontroller);
 
 angularApp.config(function($routeProvider) {
     $routeProvider
@@ -51,10 +61,12 @@ angularApp.config(function($routeProvider) {
     .when("/looks/:style", {
         templateUrl: "looks.html",
         controller: "lookscontroller"
-    })
-    .when("/looks/casual", {
-        templateUrl: "casual.html",
-        controller: "stylecontroller"
     });
+//    .when("/looks/casual", {
+//        templateUrl: "casual.html",
+//        controller: "stylecontroller"
+//    });
 });
+
+
 

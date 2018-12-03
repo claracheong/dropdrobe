@@ -21,16 +21,19 @@ app.get('/main', function(req, res) {
 // array of objects
   const data = [{
     style: 'casual',
+    definition: 'basics, essentials, everyday, easy, relaxed',
     image: 'https://notredame.box.com/shared/static/408cbkofqigvcrtddwl0bv5ptjrvwchj.jpg',
     inventory: 1,
     price: '$',
     likes: 0},
     {style: 'athleisure',
+    definition: '',
     image: '',
     inventory: 1,
     price: '$$',
     likes: 0},
     {style: 'dressy',
+    definition: '',
     image: '',
     inventory: 1,
     price: '$$$',
@@ -39,35 +42,35 @@ app.get('/main', function(req, res) {
 });
 
 app.get('/looks/casual', function(req, res) {
-  const data2 = [{
+  const data = [{
     look: 'elixaberh',
-    shoes: 'https://notredame.box.com/s/s2vcwd3xphq57flmmg2gsjj4pxozvq3l',
-    rings: 'https://notredame.box.com/s/vmx1j5mwq6fnefd13nb8g765c5jqcwky',
-    necklace: 'https://notredame.box.com/s/azdtffg08doldkaj1e6rlugxmqyqqsty',
-    outfit: 'https://notredame.box.com/s/ogo6po3798uq286653s52itzwxvf992b'},
+    shoes: 'https://notredame.box.com/shared/static/s2vcwd3xphq57flmmg2gsjj4pxozvq3l.jpg',
+    rings: 'https://notredame.box.com/shared/static/vmx1j5mwq6fnefd13nb8g765c5jqcwky.jpg',
+    necklace: 'https://notredame.box.com/shared/static/azdtffg08doldkaj1e6rlugxmqyqqsty.jpg',
+    outfit: 'https://notredame.box.com/shared/static/ogo6po3798uq286653s52itzwxvf992b.jpg'},
     {look: 'cheong',
-    shoes: 'https://notredame.box.com/s/s2vcwd3xphq57flmmg2gsjj4pxozvq3l',
-    rings: 'https://notredame.box.com/s/vmx1j5mwq6fnefd13nb8g765c5jqcwky',
-    necklace: 'https://notredame.box.com/s/azdtffg08doldkaj1e6rlugxmqyqqsty',
-    outfit: 'https://notredame.box.com/s/ogo6po3798uq286653s52itzwxvf992b'},
+    shoes: 'https://notredame.box.com/shared/static/s2vcwd3xphq57flmmg2gsjj4pxozvq3l.jpg',
+    rings: 'https://notredame.box.com/shared/static/vmx1j5mwq6fnefd13nb8g765c5jqcwky.jpg',
+    necklace: 'https://notredame.box.com/shared/static/azdtffg08doldkaj1e6rlugxmqyqqsty.jpg',
+    outfit: 'https://notredame.box.com/shared/static/ogo6po3798uq286653s52itzwxvf992b.jpg'},
     {look: 'lara',
-    shoes: 'https://notredame.box.com/s/s2vcwd3xphq57flmmg2gsjj4pxozvq3l',
-    rings: 'https://notredame.box.com/s/vmx1j5mwq6fnefd13nb8g765c5jqcwky',
-    necklace: 'https://notredame.box.com/s/azdtffg08doldkaj1e6rlugxmqyqqsty',
-    outfit: 'https://notredame.box.com/s/ogo6po3798uq286653s52itzwxvf992b'}]
-  res.status(200).send(data2)
+    shoes: 'https://notredame.box.com/shared/static/s2vcwd3xphq57flmmg2gsjj4pxozvq3l.jpg',
+    rings: 'https://notredame.box.com/shared/static/vmx1j5mwq6fnefd13nb8g765c5jqcwky.jpg',
+    necklace: 'https://notredame.box.com/shared/static/azdtffg08doldkaj1e6rlugxmqyqqsty.jpg',
+    outfit: 'https://notredame.box.com/shared/static/ogo6po3798uq286653s52itzwxvf992b.jpg'}]
+  res.status(200).send(data)
 });
 
-<<<<<<< HEAD
-//// amazon scraper
-//app.get('/amazon', function(req, res) {
-//  amazon_scraper.scraper.then(function(data) {
-//    console.log(data);
-//    amazon_scraper.printTable(data)
-//    res.status(200).send(data)
-//  });
-//});
-=======
+app.get('/looks/athleisure', function(req, res) {
+  const data = [{
+    look: 'elixaberh',
+    shoes: 'https://notredame.box.com/shared/static/s2vcwd3xphq57flmmg2gsjj4pxozvq3l.jpg',
+    rings: 'https://notredame.box.com/shared/static/vmx1j5mwq6fnefd13nb8g765c5jqcwky.jpg',
+    necklace: 'https://notredame.box.com/shared/static/azdtffg08doldkaj1e6rlugxmqyqqsty.jpg',
+    outfit: 'https://notredame.box.com/shared/static/ogo6po3798uq286653s52itzwxvf992b.jpg'}]
+  res.status(200).send(data)
+});
+
 // amazon scraper
 app.get('/amazon', function(req, res) {
   console.log('starting amazon');
@@ -80,7 +83,6 @@ app.get('/amazon', function(req, res) {
     return res.status(200).send(data)
   });
 });
->>>>>>> 1e543cffbd1ed4c2e417b2e732b8a7ae46920ab3
 
 // in case of environmental variables for privacy
 const port = process.env.PORT || 3000;
