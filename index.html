@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="angularApp">
+    <head> 
+        <title> DROPDROBE </title>
+        <link rel = "stylesheet" type = "text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.js"></script>
+        <script src = "app.js"></script>
+    </head>
+    <body>
+        
+        <div class="title">
+            <br>
+<!--            <hr align=left width="50%" size="2"/>-->
+            <div>
+                <h1>
+                    <img class="logo" src='logo.png'>
+                    DROPDROBE
+                </h1>
+                <h2>
+                    /dräp drōb/<i class=smol>noun</i>. redefining your wardrobe one drop at a time
+                </h2>
+            </div>
+<!--            <hr align=left width="50%" size="2"/>-->
+        </div>
+
+        <div class="moodboards">
+     
+            <div ng-view></div>
+
+        </div>
+    </body>
+</html>
+
+
+
+

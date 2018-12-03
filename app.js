@@ -48,6 +48,7 @@ angularApp.config(function($routeProvider) {
         controller: "maincontroller"
     })
     
+    
     .when("/looks/:style", {
         templateUrl: "looks.html",
         controller: "lookscontroller"
