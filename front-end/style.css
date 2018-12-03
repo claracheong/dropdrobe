@@ -1,30 +1,36 @@
-
-@font-face {
-    font-family: 'bakeryregular';
-    src: url('bakery-webfont.woff2') format('woff2'),
-         url('bakery-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 h1 {
-    color: grey;
-    font-size: 75px;
-    font-family: 'Playfair Display', serif;
-    padding-bottom: 0px;
+    color: #808080;
+    font-size: 560%;
+    font-family: serif;
     text-align: center;
+    text-decoration: none;
+    line-height: 0%;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 h2 {
-    font-size: 30px;
-    font-family: emizfont;
+    padding-left: 2%;
+    font-size: 125%;
+    font-family: Poiret One;
+    color: #616161;
+    padding-top: 0;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    text-align: center;
+    text-decoration: none;
 }
 
 p1 {
     clear: both;
     text-align: center;
     display: block;
+}
+
+p {
+    margin: 0;
+    line-height: normal;
+    float: right;
 }
 
 .mood {
@@ -50,7 +56,7 @@ p1 {
     text-align: right;
     padding: 10px 20px;
     font-weight: 300px;
-    font-family: 'Amatic SC', cursive; 
+    font-family: Poiret One; 
     background-color: grey;
     text-decoration: none;
     font-size: 20px;
@@ -61,9 +67,10 @@ p1 {
 /* also want to do this somehow https://css-tricks.com/slide-in-as-you-scroll-down-boxes/ */
 
 .endofpage {
-    font-family: 'Amatic SC', cursive;
+    font-family: Poiret One;
     text-align: center;
     font-size: 25px;
+    color: #616161;
 }
 
 .row {
@@ -76,3 +83,30 @@ EDIT ON
   box-sizing: border-box;
 }
 
+.logo {
+    align-content: center;
+    width: 9%;
+    padding-bottom: 0;
+    padding-left: 10px;
+}
+
+.smol {
+    font-size: 66%;
+}
+
+.consignment {
+    font-size: 450%;
+}
+
+.consign-logo {
+    align-content: center;
+    width: 7%;
+    padding-bottom: 0;
+    padding-left: 10px;
+}
+
+form {
+    align-content: center;
+    font-family: Poiret One;
+    padding-left: 40%;
+}
