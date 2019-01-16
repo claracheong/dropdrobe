@@ -1,6 +1,6 @@
 h1 {
     color: #808080;
-    font-size: 560%;
+    font-size: 500%;
     font-family: serif;
     text-align: center;
     text-decoration: none;
@@ -25,6 +25,7 @@ p1 {
     clear: both;
     text-align: center;
     display: block;
+    font-family: Poiret One;
 }
 
 p {
@@ -43,12 +44,11 @@ p {
     display: block;
     padding: 10px 20px;
     font-weight: 300px;
-    font-family: sans-serif;
-    background-color: aliceblue;
+    font-family: Poiret One;
+    background-color: #808080;
     text-decoration: none;
-    text-align: center;
-    border-radius: 200px;
-    
+    text-align: right;
+    color: white;
 }
 
 .look-button {
@@ -69,8 +69,9 @@ p {
 .endofpage {
     font-family: Poiret One;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     color: #616161;
+    margin: 15%;
 }
 
 .row {
@@ -95,7 +96,7 @@ EDIT ON
 }
 
 .consignment {
-    font-size: 450%;
+    font-size: 400%;
 }
 
 .consign-logo {
@@ -108,5 +109,23 @@ EDIT ON
 form {
     align-content: center;
     font-family: Poiret One;
-    padding-left: 40%;
+    margin: 10px 100px 0px 100px;
 }
+
+input {
+    color: #808080;
+    font-family: Poiret One;
+    width: 97%;
+    align-content: center;
+    background: white;
+    border: 
+    -webkit-appearance: none;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+
+.moodboards {
+    margin: 5%;
+}
+
